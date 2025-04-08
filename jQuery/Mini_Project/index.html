@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <div class="card w-[900px] h-[570px] bg-white relative flex shadow-[0_40px_20px_-20px_rgba(0,0,0,0.25)] perspective-[1500px] [transform-style:preserve-3d]">
+        <div class="w-[45%] h-[610px] relative bottom-[40px] shadow-[20px_0_20px_rgba(0,0,0,0.5)] z-[99]">
+            <img src="./images/x-men.jpg" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-[55%] h-full bg-[url('./images/bg.jpg')] bg-no-repeat relative bg-cover after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[rgba(36,40,42,0.9)]">
+            <div class="w-full h-full p-[60px] absolute top-0 left-0 z-[999]">
+                <div class="mb-[5px] flex items-center justify-between relative  [transform-style:preserve-3d]">
+                    <span class="text-white text-[50px] font-semibold uppercase tracking-[.25em] translate-z-[50px]">x-men</span>
+                    <span class="inline-block text-[#FAD405] text-[40px] font-['Oswald', sans-serif] font-medium translate-z-[40px] -translate-x-[10px]">7. <span class="text-[30px]">5</span> </span>
+                </div>
+                <h3 class="mb-[30px] text-[#A5A5A5] text-[24px] font-normal uppercase translate-z-[24px]">apocalypse (2016)</h3>
+                <p class="text-[#707070] text-[18px] font-normal leading-[1.5] translate-z-[18px]">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, assumenda. Necessitatibus explicabo.
+                </p>
+                <a href="#" class="text-[#707070] text-[22px] font-['Oswald', sans-serif] font-medium absolute bottom-[65px] uppercase no-underline tracking-[2px] translate-z-[22px] inline-flex items-center"><span class="mr-[10px] text-[30px]">+</span>watchlist</a>
+                <a href="#" class="p-[15px_25px] text-[#272727] bg-[#FAD405] text-[18px] font-['Oswald', sans-serif] font-medium absolute bottom-[60px] -right-[30px] uppercase no-underline tracking-[1.2px] inline-flex items-center"><i class="fa-solid fa-play mr-[10px] text-[16px]"></i>watch trailer</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/tilt.jquery.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

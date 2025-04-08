@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=DAKNDASC9B0G&format=png&color=000000">
+
+    <!-- Add FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .fields {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 32.5%;
+          }
+
+          img {
+            width: 100%;
+            border-radius: 10px 0;
+            box-shadow: 5px 5px 15px rgba(128, 128, 128, 0.6);
+            /* box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6); */
+          }
+        }
+      </style>
+</head>
+<body>
+
+
+
+    <div class="flex flex-col items-center justify-center text-center mt-4 ml-[20px] mr-[20px] mb-0">
+        <div class="mb-[50px] w-[50%] pb-3">
+            <h3 class="text-[7em] font-bold text-white mb-2 animated-border">PHoTo <span class="font-extralight text-10xl">Gallery</span></h3> 
+        </div>
+
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-md hidden transition duration-300"></div>
+
+
+        <div class="flex flex-row justify-between">
+
+            <div class="fields" id="fields-1">
+            </div>
+
+            <div class="fields" id="fields-2">
+            </div>
+
+            <div class="fields" id="fields-3">
+            </div>
+
+        </div>
+
+        <!-- Modal -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center hidden transition duration-300">
+            <div class="relative">
+                <button id="prevImage" class="absolute -left-12 top-1/2 text-white text-5xl"><i class="fa-solid fa-arrow-left"></i></button>
+                <img id="fullImage" class="max-w-full max-h-[80vh] rounded-lg shadow-lg">
+                <button id="nextImage" class="absolute -right-12 top-1/2 text-5xl text-white"><i class="fa-solid fa-arrow-right"></i></button>
+                <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl"><i class="fa-solid fa-circle-xmark"></i></button>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="max-w-xl mx-auto my-10 p-6 rounded-lg shadow-md bg-white bg-opacity-10 text-white">
+            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+            <form id="user-form">
+                <input type="text" id="name" placeholder="Name" class="w-full p-2 mb-2 border rounded bg-white  bg-opacity-10">
+                <p id="nameError" class="text-red-500 text-sm hidden">Name is required.</p>
+                <input type="email" id="email" placeholder="Email" class="w-full p-2 mb-2 border rounded bg-white  bg-opacity-10">
+                <p id="emailError" class="text-red-500 text-sm hidden">Enter a valid email.</p>
+                <textarea id="message" placeholder="Message" class="w-full p-2 mb-2 border rounded bg-white  bg-opacity-10"></textarea>
+                <p id="messageError" class="text-red-500 text-sm hidden">Message is required.</p>
+                <button type="submit" class="bg-slate-500 text-white p-2 rounded w-full">Submit</button>
+            </form>
+        </div>
+
+        <div id="response" class="text-white">
+
+        </div>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    <script type="module" src="./js/script.js"></script>
+
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("span").parent().css({
+                "background-color": "skyblue",
+                "color": "blue",
+                "border": "2px solid red"
+            });
+    
+            $("ul").parents().css({
+                "background-color": "yellow"
+            });
+    
+            $("span").parentsUntil("div").css({
+                "color": "blue",
+                "font-size": "24px",
+                "border": "2px solid black"
+            });
+    
+        });
+        
+    </script>
+
+    <style>
+
+        .ancestors * {
+            display: block;
+            border: 2px solid blue;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <h1>DOM Manipulation</h1>
+    <div class="ancestors">
+        <div style="width: 600px;" class="demo"> div (great grandparent )
+            <ul> ul (grandparent)
+                <li> li (parent)
+                    <span> span (child)
+                        span
+                    </span>
+                    <span>
+                        span
+                    </span>
+                </li>
+                <li>
+                    li
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body> 
+
+
+</html> 
